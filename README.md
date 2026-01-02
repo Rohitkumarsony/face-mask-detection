@@ -1,32 +1,25 @@
-Got it 👍
-You want the **README cleaned** and **“POC” completely removed** (no mention of POC anywhere).
-Below is a **polished, professional README** suitable for **GitHub + interviews + sharing Colab link**.
-
----
-
-```md
 # 😷 Face Mask Detection using CNN
 
-This project implements a **computer vision system** to detect whether a person is wearing a face mask using a **Convolutional Neural Network (CNN)** with **transfer learning**.
+This project implements a **computer vision–based face mask detection system** using a **Convolutional Neural Network (CNN)** with **transfer learning**. The model classifies whether a person is wearing a face mask or not from an input image.
 
 ---
 
 ## 🎯 Objective
-Classify face images into two categories:
+To classify face images into two categories:
 - **With Mask**
 - **Without Mask**
 
-Such systems are commonly applied in **public safety**, **workplace compliance**, and **automated monitoring solutions**.
+Such systems are commonly used in **public safety**, **workplace compliance**, and **automated monitoring/surveillance solutions**.
 
 ---
 
 ## 🚀 Features
-- Binary image classification (Mask / No Mask)
-- CNN built using **MobileNetV2 (transfer learning)**
+- Binary image classification (**Mask / No Mask**)
+- CNN built using **MobileNetV2 (Transfer Learning)**
 - Automated dataset download using **KaggleHub**
-- Image prediction using **URL input**
+- Supports **URL-based image prediction**
 - Lightweight and efficient inference
-- Fully reproducible via Google Colab
+- Fully reproducible using **Google Colab**
 
 ---
 
@@ -38,95 +31,67 @@ Such systems are commonly applied in **public safety**, **workplace compliance**
 - Matplotlib  
 - KaggleHub  
 
----
 
-## 📂 Project Structure
-```
-
-face-mask-detection/
-│
-├── download_dataset.py        # Dataset download script
-├── train.py                  # Model training script
-├── requirements.txt          # Dependencies
-├── face_mask_poc_model.h5    # Trained model
-└── face_mask_dataset/
-├── with_mask/
-└── without_mask/
-
-```
 
 ---
 
 ## 📊 Dataset
 **Face Mask Dataset (Kaggle)**  
 - Two classes: `with_mask`, `without_mask`
-- Dataset is downloaded programmatically using KaggleHub
+- Dataset is downloaded programmatically using **KaggleHub**
 
-Source:  
+**Dataset Source:**  
 https://www.kaggle.com/datasets/omkargurav/face-mask-dataset
 
 ---
 
 ## 🧪 Model Architecture
-- Pretrained **MobileNetV2** backbone
-- Global Average Pooling
-- Fully Connected output layer
-- Sigmoid activation for binary classification
+- Pretrained **MobileNetV2** used as the feature extractor
+- Global Average Pooling layer
+- Fully Connected (Dense) output layer
+- **Sigmoid activation** for binary classification
 
 ---
 
 ## 🧠 Training Configuration
 - Image size: `224 × 224`
-- Optimizer: Adam
-- Loss function: Binary Crossentropy
-- Epochs: 5–8
-- Data augmentation applied during training
+- Optimizer: **Adam**
+- Loss function: **Binary Crossentropy**
+- Epochs: `5–8`
+- Data augmentation applied during training to improve generalization
 
 ---
 
 ## 🔍 Inference
-The model supports **URL-based image prediction**:
+The trained model supports **URL-based image prediction**:
 1. Provide an image URL
 2. Image is downloaded and preprocessed
-3. CNN predicts mask / no mask
-4. Prediction confidence is displayed
+3. CNN predicts **With Mask / Without Mask**
+4. Prediction confidence score is displayed
 
 ---
 
 ## ▶️ How to Run (Google Colab)
 1. Open the Google Colab notebook
-2. Install dependencies
-3. Download the dataset using KaggleHub
-4. Train the model
+2. Install required dependencies
+3. Download the dataset using **KaggleHub**
+4. Train the CNN model
 5. Run inference using image URLs
 
-📌 **Colab Notebook:**  
+📌 **Google Colab Notebook:**  
 https://colab.research.google.com/drive/1ttUipqEJpxNwbxwsAqoIPoFQB1xLoW6m#scrollTo=Vf5YK_5aRygG
----
-
-## 🧪 Use Cases
-- Safety compliance monitoring
-- Face image classification tasks
-- Learning and experimentation with CNNs
-- Transfer learning applications
 
 ---
 
-## 📌 Limitations
-- Model performance depends on image quality
-- No face detection stage (assumes a visible face)
-- Designed for image-level inference
+## 📝 Notes
+- Streamlit UI has been removed from this project.
+- The focus is on **model training and inference**, not UI development.
+- The trained `.h5` model can be reused for deployment or integration into other applications.
+- This project is designed as a clean and reproducible **Proof of Concept (PoC)** for face mask detection.
 
 ---
 
-## 🔮 Future Enhancements
-- Integrate face detection (MTCNN / Haar Cascade)
-- Convert model to TensorFlow Lite
-- Deploy as REST API
-- Extend to real-time video processing
+## 👨‍💻 Author
+**Rohit Kumar**
 
 ---
-
-## 📄 License
-This project is intended for educational and research purposes.
-```
