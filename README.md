@@ -82,15 +82,6 @@ The trained model supports **URL-based image prediction**:
 https://colab.research.google.com/drive/1ttUipqEJpxNwbxwsAqoIPoFQB1xLoW6m#scrollTo=Vf5YK_5aRygG
 
 ---
-
-## 📝 Notes
-- Streamlit UI has been removed from this project.
-- The focus is on **model training and inference**, not UI development.
-- The trained `.h5` model can be reused for deployment or integration into other applications.
-- This project is designed as a clean and reproducible **Proof of Concept (PoC)** for face mask detection.
-
----
-
 ## 👨‍💻 Author
 **Rohit Kumar**
 
